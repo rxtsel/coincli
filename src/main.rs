@@ -23,12 +23,8 @@ fn main() {
     match get_coin_data(&coin_name) {
         Ok(data) => match data.get(&coin_name) {
             Some(price) => {
-                println!(
-                    "Current {} price: {}, {}",
-                    coin_name,
-                    format_usd_price(price.usd),
-                    format_cop_price(price.cop)
-                );
+                println!("{}", format_usd_price(price.usd),);
+                println!("{}", format_cop_price(price.cop),);
             }
             None => {
                 println!("Crypto not found");
