@@ -3,9 +3,12 @@ mod utils;
 use crate::utils::ascii::start_ascii;
 use crate::utils::currencies::{format_cop_price, format_usd_price};
 use crate::utils::data::get_coin_data;
+use rustls::crypto::ring::default_provider;
 use std::io;
 
 fn main() {
+    let _ = default_provider().install_default();
+
     let mut coin_name = String::new();
 
     start_ascii();

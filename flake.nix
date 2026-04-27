@@ -15,12 +15,22 @@
         "aarch64-darwin"
       ];
 
-      perSystem = {pkgs, ...}: {
+      perSystem = {
+        self',
+        pkgs,
+        ...
+      }: {
         packages.default = pkgs.rustPlatform.buildRustPackage {
           pname = "coincli";
           version = "0.1.0";
           src = ./.;
           cargoLock.lockFile = ./Cargo.lock;
+          meta.mainProgram = "coincli";
+        };
+
+        apps.default = {
+          type = "app";
+          program = pkgs.lib.getExe self'.packages.default;
         };
 
         devShells.default = pkgs.mkShell {
