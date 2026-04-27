@@ -19,7 +19,7 @@ fn main() {
     // Shadowing: trim and lowercase convert
     let coin_name = coin_name.trim().to_lowercase();
 
-    // Error managment
+    // Error management
     match get_coin_data(&coin_name) {
         Ok(data) => match data.get(&coin_name) {
             Some(price) => {
