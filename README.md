@@ -1,4 +1,4 @@
-# coincli
+# Coincli
 
 Minimal price search CLI for cryptocurrencies, built with Rust.
 
