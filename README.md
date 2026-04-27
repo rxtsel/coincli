@@ -2,10 +2,9 @@
 
 Minimal price search CLI for cryptocurrencies, built with Rust.
 
-`coincli` prompts for a cryptocurrency name, fetches live price data from CoinGecko, and prints the result in:
+`coincli` prompts for a cryptocurrency name, fetches live price data from CoinGecko.
 
-- `USD`
-- `COP`
+<img width="976" height="542" alt="image" src="https://github.com/user-attachments/assets/70cb47fe-face-4e53-a384-6db1faf71f0a" />
 
 ## Run
 
